@@ -11,20 +11,15 @@
     </body>
     <script>
         $(function (){
-            $('#btn').on({
-                
-            click: function(){
+            $('#btn').on({click: function(){
                 $('#text').html('클릭됨');
-
             }, mouseout:function(){
                 $('#text').html('마우스 떠남');
             }
             });
-
             $('#btn').on('mouseover', function(){
                     $('#text').html('마우스 올라감');
                 });
-
             $('#btn2').on('click', function(){
                 alert($('#text').html() );
             });
