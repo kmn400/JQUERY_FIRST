@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>jquer</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+         <style>
+            .main{
+                color:#0e0c0c;
+                font-family: Verdana;
+                font-size: 1rem;
+                line-height: 100px;
+                border: #ffffff 1px solid;
+                padding-left: 8px;
+            }
+            .head{
+                background-color: red;
+                width: 300px;
+                height: 100px;
+                color:#ffffff;
+                text-align: center;
+                font-family: Verdana;
+                font-size: 1rem;
+                line-height: 100px;
+                border: #ffffff 1px solid;
+                padding-left: 8px;
+            }
+            .body{
+                background-color: blue;
+                width: 300px;
+                height: 1000px;
+                text-align: center;
+                font-family: Verdana;
+                font-size: 1rem;
+                line-height: 100px;
+                border: #ffffff 1px solid;
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="main">
+            <div class='head'>기사 등록하기.</div>
+            <div class='body' id='newsbody'></div>
+        </div>
+        <button>기사 등록하기</button>
+    </body>
+    <script>
+         $(function(){
+            $('button').on('click', function(){
+                let name = prompt('작성자 명을 등록하세요');
+                let news = prompt('기사를 등록하세요');
+                $("#newsbody").append('<div class="list">' + name + ' ' + news + '</div>');
+            })
+        });
+    </script>
+</html>

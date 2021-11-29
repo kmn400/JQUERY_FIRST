@@ -13,10 +13,10 @@
         </style>
     </head>
     <body>
-        <button id='append'>append</button>
+        <button id='append'>apend</button>
         <button id='prepend'>prepend</button>
-        <button id='appendto'>append</button>
-        <button id='prependto'>prepend</button>
+        <button id='appendto'>appendto</button>
+        <button id='prependto'>prependto</button>
         <br/>
         <br/>
         <br/>
@@ -26,28 +26,30 @@
         
         $(function (){
             var source1 = '';
-            var source2 = '<div>prepend<div/>';
+            var source2 = '';
+            var source3 = '';
+            var source4 = '';
             var cont = 0;
             
             $('#append').on('click', function(){
                 count++;
-                source1 = '<div>append'+count+'<div/>'
+                source1 = '<div>append'+count+'<div/>';
                 $('#text').append(source1);
             })
             $('#prepend').on('click', function(){
                 count++;
-                source2 = '<div>prepend'+count+'<div/>'
-                $('#text').append(source2);
+                source2 = '<div>prepend'+count+'<div/>';
+                $('#text').prepend(source2);
             })
             $('#appendto').on('click', function(){
                 count++;
-                source1 = '<div>appendto'+count+'<div/>'
-                $(source1).append('#text');
+                source3 = '<div>appendto'+count+'<div/>';
+                $(source3).appendto('#text');
             })
             $('#prependto').on('click', function(){
                 count++;
-                source2 = '<div>prependto'+count+'<div/>'
-                $(source2).append('#text');
+                source4 = '<div>prependto'+count+'<div/>';
+                $(source4).prependto('#text');
             })
         });
     </script>
