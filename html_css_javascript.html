@@ -1,8 +1,12 @@
 <html>
     <head>
         <title>css2</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
         <style>
-            .color1{
+            .color1 {
                 display: inline-block;
                 border: 1px solid #000000;
                 width:100px;
@@ -13,7 +17,7 @@
                 text-decoration: none;
                 color:#ffffff;
             }
-            .color2{
+            .color2 {
                 display: inline-block;
                 border: 1px solid #000000;
                 width:100px;
@@ -27,20 +31,21 @@
         </style>
     </head>
     <body>
-        <div class='all'>
-            <p class='color1' id='html'>html</p>
-            <p class='color1' id='css'>css</p>
-            <p class='color1' id='javascript'>javascript</p>
+        <div class="all">
+            <div class="color1" id='html'>html</div>
+            <div class="color1" id='css'>css</div>
+            <div class="color1" id='javascript'>javascript</div>
         </div>
     </body>
     <script>
+        
         $(function (){
-            $('.color1').on('click', function(){
-                $(this).attr("class", 'color2');
-            });
+            $(".color1").on("click", function(){
+                $('#html').attr('class', "color1");
+                $('#css').attr('class', "color1");
+                $('#javascript').attr('class', "color1");
+                $(this).attr("class", "color2");
+            })
         });
-
-
-
     </script>
 </html>
